@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestión de Pacientes</title>
+  <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/pacientes.css"> 
+  <link rel="stylesheet" href="../css/navbar.css"> 
+</head>
+<body>
+  <!-- Navbar -->
+  <div id="navbar"></div>
+
+  <div class="container mt-5 d-flex justify-content-center align-items-start">
+    <div class="paciente-form-container">
+      <h2>Agregar Nuevo Paciente</h2>
+      <form id="formPaciente">
+        <input type="text" placeholder="ID Paciente" id="id_paciente" class="form-control mb-3" required>
+        <input type="text" placeholder="Nombre" id="nombre" class="form-control mb-3" required>
+        <input type="text" placeholder="Apellidos" id="apellidos" class="form-control mb-3" required>
+        <input type="number" placeholder="Edad" id="edad" class="form-control mb-3" required>
+        <input type="text" placeholder="Género" id="genero" class="form-control mb-3" required>
+        <input type="text" placeholder="Teléfono" id="telefono" class="form-control mb-3" required>
+        <button type="submit" class="btn btn-primary w-300">Agregar Paciente</button>
+        <button type="submit" class="btn btn-primary w-100 ">Modificar Paciente</button>
+      </form>
+    </div>
+
+    <div class="paciente-list-container ms-5">
+      <h2>Lista de Pacientes</h2>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Apellidos</th>
+            <th>Edad</th>
+            <th>Género</th>
+            <th>Teléfono</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody id="tablaPacientes">
+          <!-- Aquí se renderizarán los pacientes -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+  <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../Componentes/pacientes.js"></script>
+  <script>  
+    fetch('navbar.html')
+      .then(response => response.text())
+      .then(data => {
+          document.getElementById('navbar').innerHTML = data;
+      })
+      .catch(error => console.error('Error al cargar el navbar:', error));
+  </script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Diagnóstico en Vivo</title>
+  <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/diagnostico_vivo.css">
+  <link rel="stylesheet" href="../css/navbar.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <div id="navbar"></div>
+
+  <!-- Contenedor principal -->
+  <div class="container mt-5">
+    <div class="row">
+      <!-- Columna izquierda: Información del psicólogo/paciente y preguntas -->
+      <div class="col-md-4">
+        <!-- Información combinada del psicólogo y paciente -->
+        <div class="info-psicologo-paciente mb-4">
+          <h5 id="datosPsicologo">Nombre del Psicólogo: <!-- Datos dinámicos --></h5>
+          <h5 id="datosPaciente">Nombre del Paciente: <!-- Datos dinámicos --></h5>
+        </div>
+
+        <!-- Preguntas predefinidas -->
+        <div class="container mt-4">
+          <h4>Preguntas de Diagnóstico</h4>
+          <div id="preguntasContainer"></div> <!-- Aquí se cargarán las preguntas dinámicamente -->
+        </div>
+      </div>
+
+      <!-- Columna derecha: Cámara en vivo y Fecha y Hora -->
+      <div class="col-md-8 d-flex flex-column align-items-center">
+        <!-- Fecha y Hora de la sesión -->
+        <div class="fecha-hora mb-3 text-center">
+          <h6>Fecha y Hora:</h6>
+          <p id="fechaHoraActual"></p> <!-- Aquí aparecerá la fecha y hora -->
+        </div>
+
+        <!-- Cámara en vivo -->
+        <div class="camara mb-4">
+          <img id="videoStream" src="http://127.0.0.1:5000/video_feed" alt="Transmisión de la Cámara" class="w-100"> 
+        </div>
+
+        <!-- Botón para finalizar sesión -->
+        <button id="startSession" class="btn btn-warning">Finalizar sesión</button>
+      </div>
+    </div>
+  </div> <!-- Fin del contenedor principal -->
+
+  <!-- Scripts -->
+  <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+  <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../Componentes/diagnostico_vivo.js"></script>
+  <script>
+    // Cargar el navbar
+    fetch('navbar.html')
+      .then(response => response.text())
+      .then(data => document.getElementById('navbar').innerHTML = data)
+      .catch(error => console.error('Error al cargar el navbar:', error));
+  </script>
+  
+</body>
+</html>

@@ -1,0 +1,8 @@
+# Ignora la carpeta de dependencias
+node_modules/
+venv/
+backend/venv/
+
+# Ignora otros archivos que no quieras incluir en Git
+*.log
+.DS_Store

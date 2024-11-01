@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inicio de Sesión</title>
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/login.css"> <!-- Enlace al archivo CSS -->
+</head>
+<body>
+  <div class="wrapper">
+    <form id="loginForm" class="form">
+      <h1 class="title">Inicio</h1>
+      <div class="inp">
+        <input type="text" id="usuario" class="input" placeholder="Usuario" required>
+        <i class="fa-solid fa-user"></i>
+      </div>
+      <div class="inp">
+        <input type="password" id="password" class="input" placeholder="Contraseña" required>
+        <i class="fa-solid fa-lock"></i>
+      </div>
+      <button type="submit" class="submit">Iniciar Sesión</button>
+      <div class="error-text" id="errorText" style="display: none; color: red; margin-top: 10px;"></div>
+    </form>
+    <div class="banner">
+      <h1 class="wel_text">BIENVENIDO</h1>
+    </div>
+  </div>
+  
+  <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    document.getElementById('loginForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+      const usuario = document.getElementById('usuario').value;
+      const password = document.getElementById('password').value;
+      
+      fetch('http://127.0.0.1:5000/login', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ usuario, contraseña: password })
+      })
+      .then(response => response.json())
+      .then(data => {
+        if (data.success) {
+          // Guardar datos del usuario en el localStorage
+          localStorage.setItem('usuarioActual', JSON.stringify({
+            nombre: data.nombre,
+            apellido: data.apellido,
+            usuario: data.usuario,
+            rol: data.rol
+          }));
+
+          // Redirige según el rol
+          if (data.rol === 'psicologo') {
+            window.location.href = 'home.html';
+          } else if (data.rol === 'administrador') {
+            window.location.href = 'administrador.html';
+          }
+        } else {
+          document.getElementById('errorText').innerText = data.message;
+          document.getElementById('errorText').style.display = "block";
+        }
+      })
+      .catch(error => {
+        console.error('Error:', error);
+        document.getElementById('errorText').innerText = "Error en el servidor.";
+        document.getElementById('errorText').style.display = "block";
+      });
+    });
+  </script>  
+</body>
+</html>

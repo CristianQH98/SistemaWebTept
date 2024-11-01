@@ -1,0 +1,88 @@
+/* Estilos generales para el cuerpo */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom right, #2c3e50, #34495e);
+    color: #fbfbfb;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.container {
+    background-color: rgba(44, 62, 80, 0.9);
+    border-radius: 10px;
+    padding: 40px;
+    width: 100%;
+    max-width: 500px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo para el título */
+h2 {
+    color: #ecf0f1;
+    text-align: center;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+/* Estilos para el formulario */
+.form-group label {
+    color: #ecf0f1;
+    font-weight: bold;
+}
+
+.form-control {
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    background-color: #2c3e50;
+    color: #ecf0f1;
+}
+
+/* Estilo para el botón */
+.btn-primary {
+    background-color: #007bff;
+    border: none;
+    color: #fff;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 5px;
+    width: 100%;
+    transition: background-color 0.3s ease;
+    text-transform: uppercase;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+/* Efecto de sombra en el botón */
+.btn-primary:active {
+    box-shadow: 0 4px #666;
+    transform: translateY(2px);
+}
+
+/* Ajustes para dispositivos móviles */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+        padding: 20px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    .form-control {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .btn-primary {
+        font-size: 14px;
+        padding: 10px;
+    }
+}

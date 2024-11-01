@@ -1,0 +1,80 @@
+/* Fondo para toda la página */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom right, #2c3e50, #34495e);
+    color: #fbfbfb;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* Estilos de los contenedores de información */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.info-psicologo-paciente, .preguntas, .fecha-hora {
+    background-color: #19324c;
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px; /* Aumentado para un efecto más suave */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Sombra más pronunciada */
+    transition: transform 0.3s; /* Transición para el hover */
+}
+
+.info-psicologo-paciente, .preguntas {
+    margin-bottom: 20px;
+    width: 100%; /* Asegura que los contenedores ocupen el ancho completo */
+    max-width: 600px; /* Limita el ancho máximo */
+}
+
+.preguntas {
+    background-color: #12b0f3;
+    width: 120%;
+    max-width: 600px;
+}
+
+/* Estilo del video */
+#videoStream {
+    border-radius: 10px; /* Aumentado para un efecto más suave */
+    max-width: 70%; /* Asegura que el video sea responsivo */
+    height: auto; /* Mantiene la proporción */
+    margin-left: 200px; /* Ajusta este valor según sea necesario */
+}
+
+/* Estilos del botón de finalizar sesión */
+#startSession {
+    background-color: #ffca28;
+    color: #000;
+    border: none;
+    padding: 12px 20px; /* Aumentado para mayor comodidad al hacer clic */
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%; /* Ocupa el ancho completo */
+    max-width: 200px; /* Limita el ancho máximo */
+    transition: background-color 0.3s; /* Transición para el hover */
+}
+
+#startSession:hover {
+    background-color: #ffc107;
+}
+
+/* Efecto hover en los contenedores */
+.info-psicologo-paciente:hover, .preguntas:hover, .fecha-hora:hover {
+    transform: translateY(-2px); /* Efecto de elevación al pasar el mouse */
+}
+
+/* Responsive: Ajustes para pantallas pequeñas */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+    .info-psicologo-paciente, .preguntas, #videoStream, .fecha-hora {
+        width: 100%;
+        max-width: none; /* Remueve el límite de ancho en pantallas pequeñas */
+        margin-bottom: 20px;
+    }
+}

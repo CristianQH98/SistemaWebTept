@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Seleccionar Paciente</title>
+  <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/seleccionar_paciente.css">
+  <link rel="stylesheet" href="../css/navbar.css">
+</head>
+<body>
+    <div id="navbar"></div> <!-- Asegúrate de que esté dentro del body -->
+
+  <div class="container mt-5">
+    <h2>Seleccionar Paciente para Diagnóstico</h2>
+    <form id="seleccionarPacienteForm">
+      <div class="form-group mb-3">
+        <label for="paciente">Paciente:</label>
+        <select id="paciente" class="form-control" required>
+          <!-- Opciones de pacientes se cargarán aquí desde JavaScript -->
+        </select>
+      </div>
+      <button type="submit" class="btn btn-primary">Continuar con Diagnóstico</button>
+    </form>
+  </div>
+
+  <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+  <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../Componentes/seleccionar_paciente.js"></script>
+  <script>
+    // Cargar el contenido de navbar.html en el contenedor
+    fetch('navbar.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('navbar').innerHTML = data;
+        })
+        .catch(error => console.error('Error al cargar el navbar:', error));
+  </script>
+</body>
+</html>

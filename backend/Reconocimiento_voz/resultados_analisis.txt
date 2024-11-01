@@ -1,0 +1,12 @@
+Texto analizado: me siento mal siento como si todo
+Resultado del análisis emocional: {'sentimiento_general': '2 stars', 'emoción_específica': []}
+----------------------------------------
+Texto analizado: me siento un poco triste a veces decaído la vida ya no tiene sentido para que vivir
+Resultado del análisis emocional: {'sentimiento_general': '3 stars', 'emoción_específica': ['tristeza']}
+----------------------------------------
+Texto analizado: me siento un poco triste emocionado no sé con ansiedad a veces cuando voy al colegio me siento eh
+Resultado del análisis emocional: {'sentimiento_general': '3 stars', 'emoción_específica': ['tristeza']}
+----------------------------------------
+Texto analizado: A veces me siento nervioso cuando estoy en la universidad eh o vigilante a cualquier cosa que siento que todos me miran
+Resultado del análisis emocional: {'sentimiento_general': '2 stars', 'emoción_específica': ['miedo', 'ansiedad', 'desconfianza']}
+----------------------------------------

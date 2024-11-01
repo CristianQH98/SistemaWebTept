@@ -1,0 +1,18 @@
+/* home.css */
+
+/* Fondo y estilos similares para todas las páginas */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom right, #2c3e50, #34495e);
+    color: #fbfbfb;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.container {
+    background-color: rgba(44, 62, 80, 0.9);
+    border-radius: 10px;
+    padding: 40px;
+    text-align: center;
+}
