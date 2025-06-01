@@ -78,22 +78,52 @@ function iniciarGrabacion(preguntaId) {
         .then(response => response.json())
         .then(data => {
             const preguntasContainer = document.getElementById('preguntasContainer');
-            preguntasContainer.innerHTML = ''; // Limpiar contenido anterior
+            preguntasContainer.innerHTML = '';
 
-            data.preguntas.forEach((item, index) => {
-                const preguntaDiv = document.createElement('div');
-                preguntaDiv.classList.add('pregunta-item', 'mb-3');
-                
-                preguntaDiv.innerHTML = `
-                    <p><strong>Pregunta ${index + 1}:</strong> ${item.pregunta}</p>
-                    <div class="form-group">
-                        <textarea id="respuesta-${index}" class="form-control" placeholder="Respuesta"></textarea>
-                        <button onclick="grabarRespuesta(${index})" class="btn btn-primary mt-2">Grabar Respuesta</button>
-                    </div>
-                `;
-                
-                preguntasContainer.appendChild(preguntaDiv);
-            });
+            if (data.preguntas && data.preguntas.length > 0) {
+                data.preguntas.forEach((item, index) => {
+                    const preguntaDiv = document.createElement('div');
+                    preguntaDiv.classList.add('pregunta-item', 'mb-3');
+                    preguntaDiv.id = `pregunta-${index}`;
+
+                    preguntaDiv.innerHTML = `
+                        <p><strong>Pregunta ${index + 1}:</strong> ${item.pregunta}</p>
+                        <div class="form-group">
+                            <textarea id="respuesta-${index}" class="form-control" placeholder="Respuesta"></textarea>
+                            <div class="mt-2">
+                                <button onclick="grabarRespuesta(${index})" class="btn btn-primary mr-2">Grabar Respuesta</button>
+                                <button onclick="siguientePregunta()" class="btn btn-secondary">Siguiente Pregunta</button>
+                            </div>
+                        </div>
+                    `;
+
+                    preguntasContainer.appendChild(preguntaDiv);
+                    if (index > 0) {
+                        preguntaDiv.style.display = 'none';
+                    }
+                });
+
+                // Inicializar el índice de la pregunta actual
+                let preguntaActualIndex = 0;
+                const preguntas = document.querySelectorAll('.pregunta-item');
+
+                // Función para pasar a la siguiente pregunta
+                window.siguientePregunta = () => { // Hacerla global para que el onclick funcione
+                    if (preguntaActualIndex < preguntas.length - 1) {
+                        $(preguntas[preguntaActualIndex]).fadeOut(() => {
+                            preguntaActualIndex++;
+                            $(preguntas[preguntaActualIndex]).fadeIn();
+                            // Aquí podrías deshabilitar el botón "Grabar Respuesta" de la pregunta anterior
+                            // y habilitar el de la actual si es necesario.
+                        });
+                    } else {
+                        alert('Has llegado a la última pregunta.');
+                        // Aquí podrías habilitar el botón "Finalizar sesión"
+                    }
+                };
+            } else {
+                preguntasContainer.innerHTML = '<p>No hay preguntas disponibles.</p>';
+            }
         })
         .catch(error => console.error('Error al cargar las preguntas:', error));
 }

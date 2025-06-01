@@ -5,7 +5,7 @@ body {
 }
 
 nav {
-  background-color: #000;
+  background-color: #000000;
   width: 100%;
   position: fixed;
   top: 0;
@@ -36,7 +36,8 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  color: #00ffff;
+  color: #00ffff; /* Color del texto al pasar el mouse */
+  text-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff, 0 0 15px #00ffff; /* Efecto neón */
 }
 
 .logout-button {
@@ -51,7 +52,8 @@ nav ul li a:hover {
 }
 
 .logout-button:hover {
-  color: #00ffff;
+  color: #00ffff; /* Color del texto al pasar el mouse */
+  text-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff, 0 0 15px #00ffff; /* Efecto neón */
 }
 
 @media (max-width: 768px) {

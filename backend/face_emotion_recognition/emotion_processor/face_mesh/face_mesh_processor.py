@@ -26,7 +26,9 @@ class FaceMeshExtractor:
             'eyebrows': {'right arch': [], 'left arch': [], 'distances': []},
             'eyes': {'right arch': [], 'left arch': [], 'distances': []},
             'nose': {'distances': []},
-            'mouth': {'upper arch': [], 'lower arch': [], 'distances': []}
+            'mouth': {'upper arch': [], 'lower arch': [], 'distances': []},
+            'cheeks': {'right': [], 'left': [], 'distances': []},
+            'jaw': {'line': [], 'distances': []}
         }
 
     def extract_points(self, face_image: np.ndarray, face_mesh_info: Any) -> List[List[int]]:
@@ -84,7 +86,16 @@ class FaceMeshExtractor:
         }
         self.extract_feature_points(face_points, feature_indices)
         return self.points['mouth']
-
+    
+    def get_cheek_points(self, face_points: List[List[int]]) -> Dict[str, List[List[int]]]:
+        feature_indices = {
+        'cheeks': {
+            'right': [93, 132, 58, 172],
+            'left': [323, 361, 291, 402]
+        }
+        }
+        self.extract_feature_points(face_points, feature_indices)
+        return self.points['cheeks']
 
 class FaceMeshDrawer:
     def __init__(self, color: Tuple[int, int, int] = (255, 255, 0)):

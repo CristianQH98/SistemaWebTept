@@ -243,4 +243,5 @@ def capturar_audio():
 
 # Iniciar la aplicación
 if __name__ == "__main__":
-    app.run(debug=True)  # Ejecutar la aplicación en modo de depuración
+   app.run(host='0.0.0.0', port=5000, debug=True)
+  # Ejecutar la aplicación en modo de depuración

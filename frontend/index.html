@@ -4,14 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
-
-    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+    <title>Sistema TEPT</title>
 </head>
 <body>
-    <div class="container">
-        <h1 class="text-center mt-5">Bienvenido al sistema TEPT</h1>
-        
-      </div> 
+    <div class="container text-center">
+        <h1 class="mt-5">Bienvenido al sistema TEPT</h1>
+        <p class="lead">Accede a tu cuenta para continuar.</p>
+        <button id="loginButton" class="btn btn-primary btn-lg mt-3">Ingresar al Sistema</button>
+    </div> 
+
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.getElementById('loginButton').addEventListener('click', function() {
+            window.location.href = 'componentes/login.html'; // Redirige a la página de inicio de sesión
+        });
+    </script>
 </body>
-<script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 </html>
