@@ -1,7 +1,8 @@
 from emotion_processor.data_processing.feature_processor import FeatureProcessor
-from emotion_processor.data_processing.nose.nose_processing import (NosePointsProcessing,
-                                                                    EuclideanDistanceCalculator)
-
+from emotion_processor.data_processing.nose.nose_processing import (
+    NosePointsProcessing,
+    EuclideanDistanceCalculator
+)
 
 class NoseProcessor(FeatureProcessor):
     def __init__(self):

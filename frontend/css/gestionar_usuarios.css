@@ -1,0 +1,80 @@
+/* Fondo general */
+body {
+  background: linear-gradient(to right, #000000, #f47c20);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #fff;
+  min-height: 100vh;
+}
+
+/* Títulos */
+h2, h4 {
+  color: #f47c20;
+}
+
+/* Formulario */
+#formAgregarUsuario {
+  background-color: #1a1a1a; /* fondo más oscuro para contraste */
+  border-left: 5px solid #f47c20;
+}
+
+/* Inputs y selects */
+#formAgregarUsuario input,
+#formAgregarUsuario select {
+  background-color: #333;
+  color: #fff;
+  border: 1px solid #555;
+}
+
+#formAgregarUsuario input:focus,
+#formAgregarUsuario select:focus {
+  border-color: #f47c20;
+  box-shadow: 0 0 5px #f47c20;
+}
+
+/* Botones */
+.btn-success {
+  background-color: #f47c20;
+  border-color: #f47c20;
+  color: #000;
+}
+
+.btn-success:hover {
+  background-color: #e76600;
+  border-color: #e76600;
+  color: #fff;
+}
+
+.btn-danger {
+  background-color: #cc0000;
+  border-color: #cc0000;
+}
+
+.btn-secondary {
+  background-color: #555;
+  border-color: #555;
+}
+
+/* Tabla */
+.table-responsive {
+  background-color: #ffffff;
+}
+
+.table thead {
+  background-color: #000;
+  color: #f47c20;
+}
+
+.table tbody tr td {
+  color: #000;
+}
+
+.table tbody tr:hover {
+  background-color: #ffe5cc;
+}
+
+/* Badge de modo edición */
+#modoEdicion {
+  font-size: 0.9rem;
+  padding: 5px 10px;
+  border-radius: 10px;
+}

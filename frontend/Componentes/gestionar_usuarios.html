@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gestión de Usuarios</title>
+  <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="../css/navbar.css" />
+  <link rel="stylesheet" href="../css/gestionar_usuarios.css" />
+</head>
+<body>
+  <div id="navbar"></div>
+
+  <div class="container mt-5">
+    <h2 class="text-light mb-4">Gestión de Usuarios</h2>
+
+    <!-- Formulario para nuevo usuario -->
+    <form id="formAgregarUsuario" class="bg-dark p-4 rounded text-white mb-5">
+      <h4>Agregar nuevo usuario</h4>
+      <span id="modoEdicion" class="badge bg-warning text-dark d-none mb-2">Modo Edición</span>
+      <div class="row">
+        <div class="col-md-6 mb-3">
+          <input type="text" id="nombre" class="form-control" placeholder="Nombre" required />
+        </div>
+        <div class="col-md-6 mb-3">
+          <input type="text" id="apellido" class="form-control" placeholder="Apellido" required />
+        </div>
+        <div class="col-md-6 mb-3">
+          <input type="text" id="usuario" class="form-control" placeholder="Usuario" required />
+        </div>
+        <div class="col-md-6 mb-3">
+          <input type="password" id="contrasena" class="form-control" placeholder="Contraseña inicial" required />
+        </div>
+        <div class="col-md-6 mb-3">
+          <select id="rol" class="form-control" required>
+            <option value="">Seleccionar rol</option>
+            <option value="psicologo">Psicólogo</option>
+            <option value="administrador">Administrador</option>
+          </select>
+        </div>
+        <div class="col-md-6 mb-3">
+          <select id="estado" class="form-control" required>
+            <option value="">Seleccionar estado</option>
+            <option value="activo">Activo</option>
+            <option value="inactivo">Inactivo</option>
+          </select>
+        </div>
+      </div>
+      <button id="btnGuardarUsuario" type="submit" class="btn btn-success">Agregar Usuario</button>
+      <button type="button" id="btnCancelarEdicion" class="btn btn-secondary ms-2" style="display: none;">Cancelar</button>
+    </form>
+
+    <!-- Tabla de usuarios -->
+    <div class="table-responsive bg-light rounded p-3">
+      <table class="table table-bordered table-hover text-center">
+        <thead class="thead-dark">
+          <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Usuario</th>
+            <th>Rol</th>
+            <th>Estado</th>
+            <th>Fecha de creación</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody id="tablaUsuarios">
+          <!-- Se cargan dinámicamente -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+  <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    fetch('navbar.html')
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById('navbar').innerHTML = data;
+      });
+  </script>
+  <script src="../Componentes/gestionar_usuarios.js"></script>
+</body>
+</html>

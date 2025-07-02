@@ -20,15 +20,21 @@ class VideoStream:
             if not ret:
                 break
 
-            # Procesar el frame usando el sistema de reconocimiento de emociones
-            frame = self.emotion_recognition_system.frame_processing(frame)
+            # Ahora frame_processing devuelve también la emoción, el score y el timestamp
+            frame, emocion, score, timestamp = self.emotion_recognition_system.frame_processing(frame)
 
-            # Codificar el frame en formato JPEG
+            # Evaluar alerta y guardar captura con barra si corresponde
+            self.emotion_recognition_system.diagnostico.evaluar_alerta_emocion(
+                emocion=emocion,
+                score=score,
+                timestamp=timestamp,
+                frame=frame  # pasamos el frame actual con rostro
+            )
+
+            # Codificar el frame para envío al frontend
             ret, jpeg = cv2.imencode('.jpg', frame)
             if not ret:
                 break
 
-            # Convertir el frame a base64 para ser enviado como imagen
             frame_encoded = base64.b64encode(jpeg).decode('utf-8')
-            yield frame_encoded  # Genera un frame codificado
-
+            yield frame_encoded

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil del Administrador</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/perfil_admin.css">
+</head>
+<body>
+    <div id="navbar"></div>
+
+  <div class="perfil-container container mt-5">
+  <h2 class="text-center mb-4 text-warning">Perfil del Administrador</h2>
+
+  <div class="perfil-info bg-dark text-white p-4 rounded shadow">
+    <p><strong>Nombre:</strong> <span id="nombre-admin"></span></p>
+    <p><strong>Apellido:</strong> <span id="apellido-admin"></span></p>
+    <p><strong>Usuario:</strong> <span id="usuario-admin"></span></p>
+  </div>
+
+  <div class="text-center mt-4">
+    <button id="btn-gestionar-usuarios" class="btn btn-warning">Gestionar Usuarios</button>
+  </div>
+</div>
+
+
+    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        fetch('navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar').innerHTML = data;
+            });
+    </script>
+    <script src="../Componentes/perfil_admin.js"></script>
+</body>
+</html>

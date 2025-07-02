@@ -1,21 +1,19 @@
 from typing import Dict
 from emotion_processor.emotions_recognition.features.emotion_score import EmotionScore
-from .emotions.suprise_score import SurpriseScore
 from .emotions.angry_score import AngryScore
-from .emotions.disgust_score import DisgustScore
+from .emotions.avoidance_score import AvoidanceScore
 from .emotions.sad_score import SadScore
-from .emotions.happy_score import HappyScore
+from .emotions.tension_score import TensionScore
 from .emotions.fear_score import FearScore
 
 
 class EmotionRecognition:
     def __init__(self):
         self.emotions: Dict[str, EmotionScore] = {
-            'surprise': SurpriseScore(),
             'angry': AngryScore(),
-            'disgust': DisgustScore(),
+            'avoidance': AvoidanceScore(),
             'sad': SadScore(),
-            'happy': HappyScore(),
+            'tension': TensionScore(),
             'fear': FearScore(),
         }
 

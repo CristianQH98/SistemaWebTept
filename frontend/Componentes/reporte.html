@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Reporte de Diagnóstico</title>
+    <link rel="stylesheet" href="styles/reporte.css">
+</head>
+<body>
+    <div class="reporte-container">
+        <h1>Reporte de Evaluación - TEPT</h1>
+
+        <section>
+            <h2>Información General</h2>
+            <p><strong>Psicólogo:</strong> <span id="psicologo-nombre"></span></p>
+            <p><strong>Paciente:</strong> <span id="paciente-nombre"></span></p>
+            <p><strong>Fecha:</strong> <span id="fecha-inicio"></span></p>
+            <p><strong>Hora de finalización:</strong> <span id="fecha-fin"></span></p>
+        </section>
+
+        <section>
+            <h2>Emociones Detectadas</h2>
+            <ul id="lista-emociones"></ul>
+        </section>
+
+        <section>
+            <h2>Alertas Críticas</h2>
+            <ul id="lista-alertas"></ul>
+        </section>
+
+        <section>
+            <h2>Transcripciones</h2>
+            <ul id="lista-transcripciones"></ul>
+        </section>
+
+        <section>
+            <h2>Posturas Detectadas</h2>
+            <ul id="lista-posturas"></ul>
+        </section>
+
+        <section>
+            <h2>Capturas Críticas</h2>
+            <div id="galeria-capturas"></div>
+        </section>
+
+        <section>
+            <h2>Observaciones Finales</h2>
+            <textarea id="observaciones" rows="5" placeholder="Escriba sus observaciones aquí..."></textarea>
+        </section>
+
+        <button onclick="generarPDF()">Generar PDF</button>
+    </div>
+
+    <script src="../Componentes/reporte.js"></script>
+</body>
+</html>

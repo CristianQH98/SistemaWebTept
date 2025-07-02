@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="styles.css"> <!-- Asegúrate de que el CSS esté vinculado -->
+    <link rel="stylesheet" href="styles.css">
     <title>Navbar Responsivo</title>
 </head>
 <body>
@@ -22,16 +22,16 @@
                 <a class="nav-link" href="home.html">Inicio</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="pacientes.html">Pacientes</a>
+                <a class="nav-link" href="pacientes.html">Estudiantes</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="seleccionar_paciente.html">Nuevo Diagnóstico</a>
+                <a class="nav-link" href="seleccionar_paciente.html">Nueva Evaluación</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="historial.html">Historial</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="perfil.html">Perfil</a>
+                <a class="nav-link" href="#" id="perfilLink">Perfil</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link logout-button" href="login.html" onclick="handleLogout()">Salir</a>
@@ -41,10 +41,9 @@
 </nav>
 
 <script>
-  // Función de cierre de sesión
   function handleLogout() {
-    localStorage.removeItem('token'); // Borra el token (si lo usas para la autenticación)
-    window.location.href = 'login.html'; // Redirige a la página de login
+    localStorage.clear();
+    window.location.href = 'login.html';
   }
 </script>
 

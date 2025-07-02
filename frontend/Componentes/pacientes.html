@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Gestión de Pacientes</title>
   <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" href="../css/pacientes.css"> 
-  <link rel="stylesheet" href="../css/navbar.css"> 
+  <link rel="stylesheet" href="../css/pacientes.css">
+  <link rel="stylesheet" href="../css/navbar.css">
 </head>
 <body>
   <!-- Navbar -->
@@ -16,19 +16,19 @@
     <div class="paciente-form-container">
       <h2>Agregar Nuevo Paciente</h2>
       <form id="formPaciente">
-        <input type="text" placeholder="ID Paciente" id="id_paciente" class="form-control mb-3" required>
+        <input type="text" placeholder="ID Estudiante" id="id_paciente" class="form-control mb-3" disabled>
         <input type="text" placeholder="Nombre" id="nombre" class="form-control mb-3" required>
         <input type="text" placeholder="Apellidos" id="apellidos" class="form-control mb-3" required>
         <input type="number" placeholder="Edad" id="edad" class="form-control mb-3" required>
         <input type="text" placeholder="Género" id="genero" class="form-control mb-3" required>
         <input type="text" placeholder="Teléfono" id="telefono" class="form-control mb-3" required>
-        <button type="submit" class="btn btn-primary w-300">Agregar Paciente</button>
-        <button type="submit" class="btn btn-primary w-100 ">Modificar Paciente</button>
+        <button type="submit" class="btn btn-primary w-300">Agregar Estudiante</button>
+        <button type="submit" class="btn btn-primary w-100">Modificar Estudiante</button>
       </form>
     </div>
 
     <div class="paciente-list-container ms-5">
-      <h2>Lista de Pacientes</h2>
+      <h2>Lista de Estudiantes</h2>
       <table class="table">
         <thead>
           <tr>
@@ -42,7 +42,7 @@
           </tr>
         </thead>
         <tbody id="tablaPacientes">
-          <!-- Aquí se renderizarán los pacientes -->
+          <!-- Aquí se renderizarán los estudiantes -->
         </tbody>
       </table>
     </div>
@@ -52,11 +52,11 @@
   <script src="../node_modules/jquery/dist/jquery.min.js"></script>
   <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
   <script src="../Componentes/pacientes.js"></script>
-  <script>  
+  <script>
     fetch('navbar.html')
       .then(response => response.text())
       .then(data => {
-          document.getElementById('navbar').innerHTML = data;
+        document.getElementById('navbar').innerHTML = data;
       })
       .catch(error => console.error('Error al cargar el navbar:', error));
   </script>

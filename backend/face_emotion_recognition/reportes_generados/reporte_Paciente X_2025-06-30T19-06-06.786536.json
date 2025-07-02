@@ -1,0 +1,887 @@
+{
+    "psicologo": {
+        "nombre": "Cristian"
+    },
+    "paciente": {
+        "nombre": "Paciente X"
+    },
+    "emociones": [
+        {
+            "emocion": "angry",
+            "score": 22.0,
+            "timestamp": "2025-06-30T19:06:08.212363"
+        },
+        {
+            "emocion": "avoidance",
+            "score": 51.0,
+            "timestamp": "2025-06-30T19:06:08.212363"
+        },
+        {
+            "emocion": "sad",
+            "score": 55.0,
+            "timestamp": "2025-06-30T19:06:08.212363"
+        },
+        {
+            "emocion": "tension",
+            "score": 12.0,
+            "timestamp": "2025-06-30T19:06:08.212363"
+        },
+        {
+            "emocion": "fear",
+            "score": 22.0,
+            "timestamp": "2025-06-30T19:06:08.212363"
+        },
+        {
+            "emocion": "angry",
+            "score": 22.0,
+            "timestamp": "2025-06-30T19:06:08.315449"
+        },
+        {
+            "emocion": "avoidance",
+            "score": 51.0,
+            "timestamp": "2025-06-30T19:06:08.315449"
+        },
+        {
+            "emocion": "sad",
+            "score": 55.0,
+            "timestamp": "2025-06-30T19:06:08.315449"
+        },
+        {
+            "emocion": "tension",
+            "score": 12.0,
+            "timestamp": "2025-06-30T19:06:08.315449"
+        },
+        {
+            "emocion": "fear",
+            "score": 22.0,
+            "timestamp": "2025-06-30T19:06:08.315449"
+        },
+        {
+            "emocion": "angry",
+            "score": 22.0,
+            "timestamp": "2025-06-30T19:06:08.387320"
+        },
+        {
+            "emocion": "avoidance",
+            "score": 51.0,
+            "timestamp": "2025-06-30T19:06:08.387320"
+        },
+        {
+            "emocion": "sad",
+            "score": 55.0,
+            "timestamp": "2025-06-30T19:06:08.387320"
+        },
+        {
+            "emocion": "tension",
+            "score": 12.0,
+            "timestamp": "2025-06-30T19:06:08.387320"
+        },
+        {
+            "emocion": "fear",
+            "score": 22.0,
+            "timestamp": "2025-06-30T19:06:08.387320"
+        },
+        {
+            "emocion": "angry",
+            "score": 22.0,
+            "timestamp": "2025-06-30T19:06:08.448760"
+        },
+        {
+            "emocion": "avoidance",
+            "score": 51.0,
+            "timestamp": "2025-06-30T19:06:08.448760"
+        },
+        {
+            "emocion": "sad",
+            "score": 55.0,
+            "timestamp": "2025-06-30T19:06:08.448760"
+        },
+        {
+            "emocion": "tension",
+            "score": 12.0,
+            "timestamp": "2025-06-30T19:06:08.448760"
+        },
+        {
+            "emocion": "fear",
+            "score": 22.0,
+            "timestamp": "2025-06-30T19:06:08.448760"
+        },
+        {
+            "emocion": "angry",
+            "score": 22.0,
+            "timestamp": "2025-06-30T19:06:08.509555"
+        },
+        {
+            "emocion": "avoidance",
+            "score": 51.0,
+            "timestamp": "2025-06-30T19:06:08.509555"
+        },
+        {
+            "emocion": "sad",
+            "score": 55.0,
+            "timestamp": "2025-06-30T19:06:08.509555"
+        },
+        {
+            "emocion": "tension",
+            "score": 12.0,
+            "timestamp": "2025-06-30T19:06:08.509555"
+        },
+        {
+            "emocion": "fear",
+            "score": 22.0,
+            "timestamp": "2025-06-30T19:06:08.509555"
+        },
+        {
+            "emocion": "angry",
+            "score": 22.0,
+            "timestamp": "2025-06-30T19:06:08.570186"
+        },
+        {
+            "emocion": "avoidance",
+            "score": 51.0,
+            "timestamp": "2025-06-30T19:06:08.570186"
+        },
+        {
+            "emocion": "sad",
+            "score": 55.0,
+            "timestamp": "2025-06-30T19:06:08.570186"
+        },
+        {
+            "emocion": "tension",
+            "score": 12.0,
+            "timestamp": "2025-06-30T19:06:08.570186"
+        },
+        {
+            "emocion": "fear",
+            "score": 22.0,
+            "timestamp": "2025-06-30T19:06:08.570186"
+        },
+        {
+            "emocion": "angry",
+            "score": 22.0,
+            "timestamp": "2025-06-30T19:06:08.631946"
+        },
+        {
+            "emocion": "avoidance",
+            "score": 51.0,
+            "timestamp": "2025-06-30T19:06:08.631946"
+        },
+        {
+            "emocion": "sad",
+            "score": 55.0,
+            "timestamp": "2025-06-30T19:06:08.631946"
+        },
+        {
+            "emocion": "tension",
+            "score": 12.0,
+            "timestamp": "2025-06-30T19:06:08.631946"
+        },
+        {
+            "emocion": "fear",
+            "score": 22.0,
+            "timestamp": "2025-06-30T19:06:08.631946"
+        },
+        {
+            "emocion": "angry",
+            "score": 22.0,
+            "timestamp": "2025-06-30T19:06:08.691997"
+        },
+        {
+            "emocion": "avoidance",
+            "score": 51.0,
+            "timestamp": "2025-06-30T19:06:08.691997"
+        },
+        {
+            "emocion": "sad",
+            "score": 55.0,
+            "timestamp": "2025-06-30T19:06:08.691997"
+        },
+        {
+            "emocion": "tension",
+            "score": 12.0,
+            "timestamp": "2025-06-30T19:06:08.691997"
+        },
+        {
+            "emocion": "fear",
+            "score": 22.0,
+            "timestamp": "2025-06-30T19:06:08.691997"
+        },
+        {
+            "emocion": "angry",
+            "score": 22.0,
+            "timestamp": "2025-06-30T19:06:08.751907"
+        },
+        {
+            "emocion": "avoidance",
+            "score": 51.0,
+            "timestamp": "2025-06-30T19:06:08.751907"
+        },
+        {
+            "emocion": "sad",
+            "score": 55.0,
+            "timestamp": "2025-06-30T19:06:08.751907"
+        },
+        {
+            "emocion": "tension",
+            "score": 12.0,
+            "timestamp": "2025-06-30T19:06:08.751907"
+        },
+        {
+            "emocion": "fear",
+            "score": 22.0,
+            "timestamp": "2025-06-30T19:06:08.751907"
+        },
+        {
+            "emocion": "angry",
+            "score": 22.0,
+            "timestamp": "2025-06-30T19:06:08.817715"
+        },
+        {
+            "emocion": "avoidance",
+            "score": 51.0,
+            "timestamp": "2025-06-30T19:06:08.817715"
+        },
+        {
+            "emocion": "sad",
+            "score": 55.0,
+            "timestamp": "2025-06-30T19:06:08.817715"
+        },
+        {
+            "emocion": "tension",
+            "score": 12.0,
+            "timestamp": "2025-06-30T19:06:08.817715"
+        },
+        {
+            "emocion": "fear",
+            "score": 22.0,
+            "timestamp": "2025-06-30T19:06:08.817715"
+        },
+        {
+            "emocion": "angry",
+            "score": 22.0,
+            "timestamp": "2025-06-30T19:06:08.883083"
+        },
+        {
+            "emocion": "avoidance",
+            "score": 51.0,
+            "timestamp": "2025-06-30T19:06:08.883083"
+        },
+        {
+            "emocion": "sad",
+            "score": 55.0,
+            "timestamp": "2025-06-30T19:06:08.883083"
+        },
+        {
+            "emocion": "tension",
+            "score": 12.0,
+            "timestamp": "2025-06-30T19:06:08.883083"
+        },
+        {
+            "emocion": "fear",
+            "score": 22.0,
+            "timestamp": "2025-06-30T19:06:08.883083"
+        },
+        {
+            "emocion": "angry",
+            "score": 22.0,
+            "timestamp": "2025-06-30T19:06:08.944775"
+        },
+        {
+            "emocion": "avoidance",
+            "score": 51.0,
+            "timestamp": "2025-06-30T19:06:08.944775"
+        },
+        {
+            "emocion": "sad",
+            "score": 55.0,
+            "timestamp": "2025-06-30T19:06:08.944775"
+        },
+        {
+            "emocion": "tension",
+            "score": 12.0,
+            "timestamp": "2025-06-30T19:06:08.944775"
+        },
+        {
+            "emocion": "fear",
+            "score": 22.0,
+            "timestamp": "2025-06-30T19:06:08.944775"
+        },
+        {
+            "emocion": "angry",
+            "score": 22.0,
+            "timestamp": "2025-06-30T19:06:09.009273"
+        },
+        {
+            "emocion": "avoidance",
+            "score": 51.0,
+            "timestamp": "2025-06-30T19:06:09.009273"
+        },
+        {
+            "emocion": "sad",
+            "score": 55.0,
+            "timestamp": "2025-06-30T19:06:09.009273"
+        },
+        {
+            "emocion": "tension",
+            "score": 12.0,
+            "timestamp": "2025-06-30T19:06:09.009273"
+        },
+        {
+            "emocion": "fear",
+            "score": 22.0,
+            "timestamp": "2025-06-30T19:06:09.009273"
+        },
+        {
+            "emocion": "angry",
+            "score": 22.0,
+            "timestamp": "2025-06-30T19:06:09.088684"
+        },
+        {
+            "emocion": "avoidance",
+            "score": 51.0,
+            "timestamp": "2025-06-30T19:06:09.088684"
+        },
+        {
+            "emocion": "sad",
+            "score": 55.0,
+            "timestamp": "2025-06-30T19:06:09.088684"
+        },
+        {
+            "emocion": "tension",
+            "score": 12.0,
+            "timestamp": "2025-06-30T19:06:09.088684"
+        },
+        {
+            "emocion": "fear",
+            "score": 22.0,
+            "timestamp": "2025-06-30T19:06:09.088684"
+        },
+        {
+            "emocion": "angry",
+            "score": 22.0,
+            "timestamp": "2025-06-30T19:06:09.154017"
+        },
+        {
+            "emocion": "avoidance",
+            "score": 51.0,
+            "timestamp": "2025-06-30T19:06:09.154017"
+        },
+        {
+            "emocion": "sad",
+            "score": 55.0,
+            "timestamp": "2025-06-30T19:06:09.154017"
+        },
+        {
+            "emocion": "tension",
+            "score": 12.0,
+            "timestamp": "2025-06-30T19:06:09.154017"
+        },
+        {
+            "emocion": "fear",
+            "score": 22.0,
+            "timestamp": "2025-06-30T19:06:09.154017"
+        },
+        {
+            "emocion": "angry",
+            "score": 22.0,
+            "timestamp": "2025-06-30T19:06:09.220471"
+        },
+        {
+            "emocion": "avoidance",
+            "score": 51.0,
+            "timestamp": "2025-06-30T19:06:09.220471"
+        },
+        {
+            "emocion": "sad",
+            "score": 55.0,
+            "timestamp": "2025-06-30T19:06:09.220471"
+        },
+        {
+            "emocion": "tension",
+            "score": 12.0,
+            "timestamp": "2025-06-30T19:06:09.220471"
+        },
+        {
+            "emocion": "fear",
+            "score": 22.0,
+            "timestamp": "2025-06-30T19:06:09.220471"
+        },
+        {
+            "emocion": "angry",
+            "score": 22.0,
+            "timestamp": "2025-06-30T19:06:09.281569"
+        },
+        {
+            "emocion": "avoidance",
+            "score": 51.0,
+            "timestamp": "2025-06-30T19:06:09.281569"
+        },
+        {
+            "emocion": "sad",
+            "score": 55.0,
+            "timestamp": "2025-06-30T19:06:09.281569"
+        },
+        {
+            "emocion": "tension",
+            "score": 12.0,
+            "timestamp": "2025-06-30T19:06:09.281569"
+        },
+        {
+            "emocion": "fear",
+            "score": 22.0,
+            "timestamp": "2025-06-30T19:06:09.281569"
+        },
+        {
+            "emocion": "angry",
+            "score": 22.0,
+            "timestamp": "2025-06-30T19:06:09.342466"
+        },
+        {
+            "emocion": "avoidance",
+            "score": 51.0,
+            "timestamp": "2025-06-30T19:06:09.342466"
+        },
+        {
+            "emocion": "sad",
+            "score": 55.0,
+            "timestamp": "2025-06-30T19:06:09.342466"
+        },
+        {
+            "emocion": "tension",
+            "score": 12.0,
+            "timestamp": "2025-06-30T19:06:09.342466"
+        },
+        {
+            "emocion": "fear",
+            "score": 22.0,
+            "timestamp": "2025-06-30T19:06:09.342466"
+        },
+        {
+            "emocion": "angry",
+            "score": 12.0,
+            "timestamp": "2025-06-30T19:06:09.405927"
+        },
+        {
+            "emocion": "avoidance",
+            "score": 30.0,
+            "timestamp": "2025-06-30T19:06:09.405927"
+        },
+        {
+            "emocion": "sad",
+            "score": 20.0,
+            "timestamp": "2025-06-30T19:06:09.405927"
+        },
+        {
+            "emocion": "tension",
+            "score": 12.0,
+            "timestamp": "2025-06-30T19:06:09.405927"
+        },
+        {
+            "emocion": "fear",
+            "score": 34.0,
+            "timestamp": "2025-06-30T19:06:09.405927"
+        },
+        {
+            "emocion": "angry",
+            "score": 22.0,
+            "timestamp": "2025-06-30T19:06:09.489684"
+        },
+        {
+            "emocion": "avoidance",
+            "score": 51.0,
+            "timestamp": "2025-06-30T19:06:09.489684"
+        },
+        {
+            "emocion": "sad",
+            "score": 55.0,
+            "timestamp": "2025-06-30T19:06:09.489684"
+        },
+        {
+            "emocion": "tension",
+            "score": 12.0,
+            "timestamp": "2025-06-30T19:06:09.489684"
+        },
+        {
+            "emocion": "fear",
+            "score": 22.0,
+            "timestamp": "2025-06-30T19:06:09.489684"
+        },
+        {
+            "emocion": "angry",
+            "score": 22.0,
+            "timestamp": "2025-06-30T19:06:09.554370"
+        },
+        {
+            "emocion": "avoidance",
+            "score": 51.0,
+            "timestamp": "2025-06-30T19:06:09.554370"
+        },
+        {
+            "emocion": "sad",
+            "score": 55.0,
+            "timestamp": "2025-06-30T19:06:09.554370"
+        },
+        {
+            "emocion": "tension",
+            "score": 12.0,
+            "timestamp": "2025-06-30T19:06:09.554370"
+        },
+        {
+            "emocion": "fear",
+            "score": 22.0,
+            "timestamp": "2025-06-30T19:06:09.554370"
+        },
+        {
+            "emocion": "angry",
+            "score": 22.0,
+            "timestamp": "2025-06-30T19:06:09.618291"
+        },
+        {
+            "emocion": "avoidance",
+            "score": 51.0,
+            "timestamp": "2025-06-30T19:06:09.618291"
+        },
+        {
+            "emocion": "sad",
+            "score": 55.0,
+            "timestamp": "2025-06-30T19:06:09.618291"
+        },
+        {
+            "emocion": "tension",
+            "score": 12.0,
+            "timestamp": "2025-06-30T19:06:09.618291"
+        },
+        {
+            "emocion": "fear",
+            "score": 22.0,
+            "timestamp": "2025-06-30T19:06:09.618291"
+        },
+        {
+            "emocion": "angry",
+            "score": 12.0,
+            "timestamp": "2025-06-30T19:06:09.680940"
+        },
+        {
+            "emocion": "avoidance",
+            "score": 30.0,
+            "timestamp": "2025-06-30T19:06:09.680940"
+        },
+        {
+            "emocion": "sad",
+            "score": 20.0,
+            "timestamp": "2025-06-30T19:06:09.680940"
+        },
+        {
+            "emocion": "tension",
+            "score": 12.0,
+            "timestamp": "2025-06-30T19:06:09.680940"
+        },
+        {
+            "emocion": "fear",
+            "score": 34.0,
+            "timestamp": "2025-06-30T19:06:09.680940"
+        },
+        {
+            "emocion": "angry",
+            "score": 12.0,
+            "timestamp": "2025-06-30T19:06:09.739656"
+        },
+        {
+            "emocion": "avoidance",
+            "score": 30.0,
+            "timestamp": "2025-06-30T19:06:09.739656"
+        },
+        {
+            "emocion": "sad",
+            "score": 20.0,
+            "timestamp": "2025-06-30T19:06:09.739656"
+        },
+        {
+            "emocion": "tension",
+            "score": 12.0,
+            "timestamp": "2025-06-30T19:06:09.739656"
+        },
+        {
+            "emocion": "fear",
+            "score": 34.0,
+            "timestamp": "2025-06-30T19:06:09.739656"
+        },
+        {
+            "emocion": "angry",
+            "score": 12.0,
+            "timestamp": "2025-06-30T19:06:09.799088"
+        },
+        {
+            "emocion": "avoidance",
+            "score": 30.0,
+            "timestamp": "2025-06-30T19:06:09.799088"
+        },
+        {
+            "emocion": "sad",
+            "score": 20.0,
+            "timestamp": "2025-06-30T19:06:09.799088"
+        },
+        {
+            "emocion": "tension",
+            "score": 12.0,
+            "timestamp": "2025-06-30T19:06:09.799088"
+        },
+        {
+            "emocion": "fear",
+            "score": 34.0,
+            "timestamp": "2025-06-30T19:06:09.799088"
+        },
+        {
+            "emocion": "angry",
+            "score": 12.0,
+            "timestamp": "2025-06-30T19:06:09.887876"
+        },
+        {
+            "emocion": "avoidance",
+            "score": 30.0,
+            "timestamp": "2025-06-30T19:06:09.887876"
+        },
+        {
+            "emocion": "sad",
+            "score": 20.0,
+            "timestamp": "2025-06-30T19:06:09.887876"
+        },
+        {
+            "emocion": "tension",
+            "score": 12.0,
+            "timestamp": "2025-06-30T19:06:09.887876"
+        },
+        {
+            "emocion": "fear",
+            "score": 34.0,
+            "timestamp": "2025-06-30T19:06:09.887876"
+        },
+        {
+            "emocion": "angry",
+            "score": 22.0,
+            "timestamp": "2025-06-30T19:06:09.947007"
+        },
+        {
+            "emocion": "avoidance",
+            "score": 51.0,
+            "timestamp": "2025-06-30T19:06:09.947007"
+        },
+        {
+            "emocion": "sad",
+            "score": 55.0,
+            "timestamp": "2025-06-30T19:06:09.947007"
+        },
+        {
+            "emocion": "tension",
+            "score": 12.0,
+            "timestamp": "2025-06-30T19:06:09.947007"
+        },
+        {
+            "emocion": "fear",
+            "score": 22.0,
+            "timestamp": "2025-06-30T19:06:09.947007"
+        },
+        {
+            "emocion": "angry",
+            "score": 12.0,
+            "timestamp": "2025-06-30T19:06:10.009184"
+        },
+        {
+            "emocion": "avoidance",
+            "score": 30.0,
+            "timestamp": "2025-06-30T19:06:10.009184"
+        },
+        {
+            "emocion": "sad",
+            "score": 20.0,
+            "timestamp": "2025-06-30T19:06:10.009184"
+        },
+        {
+            "emocion": "tension",
+            "score": 12.0,
+            "timestamp": "2025-06-30T19:06:10.009184"
+        },
+        {
+            "emocion": "fear",
+            "score": 34.0,
+            "timestamp": "2025-06-30T19:06:10.009184"
+        },
+        {
+            "emocion": "angry",
+            "score": 22.0,
+            "timestamp": "2025-06-30T19:06:10.079638"
+        },
+        {
+            "emocion": "avoidance",
+            "score": 51.0,
+            "timestamp": "2025-06-30T19:06:10.079638"
+        },
+        {
+            "emocion": "sad",
+            "score": 55.0,
+            "timestamp": "2025-06-30T19:06:10.079638"
+        },
+        {
+            "emocion": "tension",
+            "score": 12.0,
+            "timestamp": "2025-06-30T19:06:10.079638"
+        },
+        {
+            "emocion": "fear",
+            "score": 22.0,
+            "timestamp": "2025-06-30T19:06:10.079638"
+        },
+        {
+            "emocion": "angry",
+            "score": 12.0,
+            "timestamp": "2025-06-30T19:06:10.139506"
+        },
+        {
+            "emocion": "avoidance",
+            "score": 30.0,
+            "timestamp": "2025-06-30T19:06:10.139506"
+        },
+        {
+            "emocion": "sad",
+            "score": 20.0,
+            "timestamp": "2025-06-30T19:06:10.139506"
+        },
+        {
+            "emocion": "tension",
+            "score": 12.0,
+            "timestamp": "2025-06-30T19:06:10.139506"
+        },
+        {
+            "emocion": "fear",
+            "score": 34.0,
+            "timestamp": "2025-06-30T19:06:10.139506"
+        }
+    ],
+    "posturas": [
+        {
+            "postura": "incompleta",
+            "timestamp": "2025-06-30T19:06:08.212363"
+        },
+        {
+            "postura": "incompleta",
+            "timestamp": "2025-06-30T19:06:08.315449"
+        },
+        {
+            "postura": "incompleta",
+            "timestamp": "2025-06-30T19:06:08.387320"
+        },
+        {
+            "postura": "incompleta",
+            "timestamp": "2025-06-30T19:06:08.448760"
+        },
+        {
+            "postura": "incompleta",
+            "timestamp": "2025-06-30T19:06:08.509555"
+        },
+        {
+            "postura": "incompleta",
+            "timestamp": "2025-06-30T19:06:08.570186"
+        },
+        {
+            "postura": "incompleta",
+            "timestamp": "2025-06-30T19:06:08.631946"
+        },
+        {
+            "postura": "incompleta",
+            "timestamp": "2025-06-30T19:06:08.691997"
+        },
+        {
+            "postura": "incompleta",
+            "timestamp": "2025-06-30T19:06:08.751907"
+        },
+        {
+            "postura": "incompleta",
+            "timestamp": "2025-06-30T19:06:08.817715"
+        },
+        {
+            "postura": "incompleta",
+            "timestamp": "2025-06-30T19:06:08.883083"
+        },
+        {
+            "postura": "incompleta",
+            "timestamp": "2025-06-30T19:06:08.944775"
+        },
+        {
+            "postura": "incompleta",
+            "timestamp": "2025-06-30T19:06:09.009273"
+        },
+        {
+            "postura": "incompleta",
+            "timestamp": "2025-06-30T19:06:09.088684"
+        },
+        {
+            "postura": "incompleta",
+            "timestamp": "2025-06-30T19:06:09.154017"
+        },
+        {
+            "postura": "incompleta",
+            "timestamp": "2025-06-30T19:06:09.220471"
+        },
+        {
+            "postura": "incompleta",
+            "timestamp": "2025-06-30T19:06:09.281569"
+        },
+        {
+            "postura": "incompleta",
+            "timestamp": "2025-06-30T19:06:09.342466"
+        },
+        {
+            "postura": "incompleta",
+            "timestamp": "2025-06-30T19:06:09.405927"
+        },
+        {
+            "postura": "incompleta",
+            "timestamp": "2025-06-30T19:06:09.489684"
+        },
+        {
+            "postura": "incompleta",
+            "timestamp": "2025-06-30T19:06:09.554370"
+        },
+        {
+            "postura": "incompleta",
+            "timestamp": "2025-06-30T19:06:09.618291"
+        },
+        {
+            "postura": "incompleta",
+            "timestamp": "2025-06-30T19:06:09.680940"
+        },
+        {
+            "postura": "incompleta",
+            "timestamp": "2025-06-30T19:06:09.739656"
+        },
+        {
+            "postura": "incompleta",
+            "timestamp": "2025-06-30T19:06:09.799088"
+        },
+        {
+            "postura": "incompleta",
+            "timestamp": "2025-06-30T19:06:09.887876"
+        },
+        {
+            "postura": "incompleta",
+            "timestamp": "2025-06-30T19:06:09.947007"
+        },
+        {
+            "postura": "incompleta",
+            "timestamp": "2025-06-30T19:06:10.009184"
+        },
+        {
+            "postura": "incompleta",
+            "timestamp": "2025-06-30T19:06:10.079638"
+        },
+        {
+            "postura": "incompleta",
+            "timestamp": "2025-06-30T19:06:10.139506"
+        }
+    ],
+    "voz": [],
+    "capturas": [],
+    "alertas": [],
+    "timestamp_inicio": "2025-06-30T19:06:06.786536",
+    "timestamp_fin": "2025-06-30T19:06:10.688072"
+}

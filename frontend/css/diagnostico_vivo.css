@@ -1,14 +1,12 @@
-/* Fondo para toda la página */
 body {
     font-family: Arial, sans-serif;
-    background: linear-gradient(to bottom right, #2c3e50, #34495e);
+    background: linear-gradient(to bottom right, #000000, #1a1a1a);
     color: #fbfbfb;
     margin: 0;
     padding: 0;
     overflow-x: hidden;
 }
 
-/* Estilos de los contenedores de información */
 .container {
     display: flex;
     flex-direction: column;
@@ -16,65 +14,124 @@ body {
     padding: 20px;
 }
 
-.info-psicologo-paciente, .preguntas, .fecha-hora {
-    background-color: #19324c;
+/* Tarjetas de información */
+.info-psicologo-paciente, .fecha-hora {
+    background-color: #111;
     color: #fff;
     padding: 20px;
-    border-radius: 10px; /* Aumentado para un efecto más suave */
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Sombra más pronunciada */
-    transition: transform 0.3s; /* Transición para el hover */
-}
-
-.info-psicologo-paciente, .preguntas {
+    border-radius: 10px;
+    box-shadow: 0 0 12px rgba(255, 102, 0, 0.4);
+    border: 1px solid #ff6600;
     margin-bottom: 20px;
-    width: 100%; /* Asegura que los contenedores ocupen el ancho completo */
-    max-width: 600px; /* Limita el ancho máximo */
-}
-
-.preguntas {
-    background-color: #12b0f3;
-    width: 120%;
     max-width: 600px;
+    width: 100%;
+    transition: transform 0.3s;
 }
 
-/* Estilo del video */
+/* Preguntas */
+.preguntas h4 {
+    color: #ff6600;
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-shadow: 0 0 4px rgba(255, 102, 0, 0.3);
+}
+
+.preguntas p {
+    color: #eeeeee;
+    font-size: 17px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ff6600;
+    background-color: #1c1c1c;
+    color: #fff;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/* Video */
 #videoStream {
-    border-radius: 10px; /* Aumentado para un efecto más suave */
-    max-width: 70%; /* Asegura que el video sea responsivo */
-    height: auto; /* Mantiene la proporción */
-    margin-left: 200px; /* Ajusta este valor según sea necesario */
+    border-radius: 10px;
+    max-width: 640px;
+    width: 100%;
+    height: auto;
+    margin: 20px auto;
+    box-shadow: 0 0 12px rgba(255, 102, 0, 0.4);
 }
 
-/* Estilos del botón de finalizar sesión */
+/* Botón finalizar */
 #startSession {
-    background-color: #ffca28;
-    color: #000;
+    background-color: #ff6600;
+    color: #fff;
     border: none;
-    padding: 12px 20px; /* Aumentado para mayor comodidad al hacer clic */
+    padding: 12px 20px;
     border-radius: 5px;
     cursor: pointer;
-    width: 100%; /* Ocupa el ancho completo */
-    max-width: 200px; /* Limita el ancho máximo */
-    transition: background-color 0.3s; /* Transición para el hover */
+    width: 100%;
+    max-width: 200px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.3s;
 }
 
 #startSession:hover {
-    background-color: #ffc107;
+    background-color: #cc5200;
 }
 
-/* Efecto hover en los contenedores */
-.info-psicologo-paciente:hover, .preguntas:hover, .fecha-hora:hover {
-    transform: translateY(-2px); /* Efecto de elevación al pasar el mouse */
+/* Botones de respuesta */
+.btn-kolping {
+    background-color: #ff6600;
+    color: #fff;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 5px;
+    margin: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-/* Responsive: Ajustes para pantallas pequeñas */
+.btn-kolping:hover {
+    background-color: #cc5200;
+}
+
+.btn-kolping-secundario {
+    background-color: #444;
+    color: #fff;
+    padding: 10px 16px;
+    border-radius: 5px;
+    border: 1px solid #999;
+    cursor: pointer;
+    font-weight: bold;
+    margin: 5px;
+}
+
+.btn-kolping-secundario:hover {
+    background-color: #666;
+}
+
+/* Hover tarjetas */
+.info-psicologo-paciente:hover,
+.preguntas:hover,
+.fecha-hora:hover {
+    transform: translateY(-2px);
+}
+
+/* Responsive */
 @media (max-width: 768px) {
     .container {
         padding: 10px;
     }
-    .info-psicologo-paciente, .preguntas, #videoStream, .fecha-hora {
+
+    .info-psicologo-paciente, .fecha-hora, .preguntas, #videoStream {
         width: 100%;
-        max-width: none; /* Remueve el límite de ancho en pantallas pequeñas */
+        max-width: none;
         margin-bottom: 20px;
     }
 }

@@ -21,4 +21,3 @@ class PointsProcessing:
             feature_points = points.get(feature, {})
             self.processed_points[feature] = processor.process(feature_points)
         return self.processed_points
-

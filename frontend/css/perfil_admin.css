@@ -1,0 +1,68 @@
+/* perfil_admin.css */
+
+.perfil-container {
+    padding: 40px;
+    background-color: #0f0f0f; /* Igual que el fondo del psicólogo */
+    border-radius: 12px;
+    box-shadow: 0 0 12px rgba(255, 102, 0, 0.4); /* efecto anaranjado sutil */
+    border: 2px solid #ff9900; /* Borde temático */
+}
+
+.perfil-info {
+    background-color: #2c2f33;
+    color: #ffffff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.perfil-info p {
+    font-size: 18px;
+    margin-bottom: 12px;
+}
+
+.text-warning {
+    font-weight: bold;
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #ffbf00; /* un amarillo más cálido */
+}
+
+.btn-warning {
+    font-weight: 600;
+    padding: 10px 20px;
+    font-size: 16px;
+    margin-top: 20px;
+    border: none;
+    background-color: #ffbf00;
+    color: #000;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-warning:hover {
+    background-color: #ffaa00;
+    transform: scale(1.05);
+}
+
+/* Responsivo */
+@media (max-width: 576px) {
+    .perfil-container {
+        padding: 20px;
+    }
+
+    .perfil-info p {
+        font-size: 16px;
+    }
+
+    .text-warning {
+        font-size: 24px;
+    }
+
+    .btn-warning {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+}

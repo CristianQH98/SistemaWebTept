@@ -23,3 +23,8 @@ class MouthCheck(ABC):
     @abstractmethod
     def check_mouth(self, mouth: dict) -> str:
         pass
+
+class PostureCheck(ABC):
+    @abstractmethod
+    def check_posture(self, posture: dict) -> str:
+        pass

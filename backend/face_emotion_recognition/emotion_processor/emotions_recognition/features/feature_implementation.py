@@ -1,5 +1,5 @@
 from emotion_processor.emotions_recognition.features.feature_check import (EyebrowsCheck, EyesCheck, NoseCheck,
-                                                                           MouthCheck)
+                                                                           MouthCheck, PostureCheck)
 
 
 class BasicEyebrowsCheck(EyebrowsCheck):
@@ -52,5 +52,23 @@ class BasicMouthCheck(MouthCheck):
 
         results.append('right smile' if right_lip > right_smile else 'no right smile')
         results.append('left smile' if left_lip > left_smile else 'no left smile')
+
+        return ', '.join(results)
+class BasicPostureCheck(PostureCheck):
+    def check_posture(self, posture: dict) -> str:
+        results = []
+
+        shoulder_distance = posture['shoulder_to_ear_distance']
+        head_neck_distance = posture['head_to_neck_angle']
+        torso_movement = posture['torso_movement']
+
+        if shoulder_distance < 0.1:  # valor pequeño = hombros elevados
+            results.append('shoulders raised')
+
+        if head_neck_distance < -10:  # ángulo negativo = cabeza echada hacia atrás
+            results.append('head pulled back')
+
+        if torso_movement < 0.05:  # casi sin movimiento
+            results.append('torso rigid')
 
         return ', '.join(results)

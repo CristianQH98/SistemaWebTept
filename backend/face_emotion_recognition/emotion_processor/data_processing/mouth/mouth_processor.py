@@ -12,3 +12,5 @@ class MouthProcessor(FeatureProcessor):
 
     def process(self, points: dict):
         return self.processor.main(points)
+      #  print("MOUTH RESULT:", resultado)
+      #  return resultado

@@ -6,7 +6,7 @@
     <title>Inicio</title>
     <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/navbar.css"> 
-    <link rel="stylesheet" href="../css/home.css"> <!-- Archivo CSS común para estilos adicionales -->
+    <link rel="stylesheet" href="../css/home.css">
 </head>
 <body>
     <!-- Navbar -->
@@ -17,17 +17,40 @@
         <h1 class="text-center text-light">Bienvenido al sistema TEPT</h1>
     </div> 
 
+    <!-- Panel solo para Administrador -->
+    <div class="container" id="soloAdmin" style="display: none;">
+        <div class="alert alert-primary mt-4">Panel exclusivo para <strong>Administrador</strong>: gestión de psicólogos, configuraciones, etc.</div>
+    </div>
+
+    <!-- Panel solo para Psicólogo -->
+    <div class="container" id="soloPsico" style="display: none;">
+        <div class="alert alert-success mt-4">Panel exclusivo para <strong>Psicólogo</strong>: evaluación, registro de pacientes, etc.</div>
+    </div>
+
     <!-- Scripts -->
     <script src="../node_modules/jquery/dist/jquery.min.js"></script>
     <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-        // Cargar el contenido de navbar.html en el contenedor
-        fetch('navbar.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('navbar').innerHTML = data;
-            })
-            .catch(error => console.error('Error al cargar el navbar:', error));
+        // Cargar el contenido de navbar.html en el contenedor y luego inyectar navbar.js
+         fetch('navbar.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('navbar').innerHTML = data;
+
+            // Insertar navbar.js dinámicamente
+            const script = document.createElement('script');
+            script.src = 'navbar.js';
+            document.body.appendChild(script);
+
+            // 👇 Esperar que el script cargue antes de ejecutar la lógica
+            script.onload = () => {
+                if (typeof configurarPerfilLink === "function") {
+                    configurarPerfilLink();
+                }
+            };
+        })
+        .catch(error => console.error('Error al cargar el navbar:', error));
     </script>
+    <script src="home.js"></script>
 </body>
 </html>

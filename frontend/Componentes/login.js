@@ -13,13 +13,14 @@ function autenticarUsuario(usuario, contraseña) {
             fetch(`http://127.0.0.1:5000/usuarios/${usuario}`)
                 .then(response => response.json())
                 .then(userData => {
+                    userData.usuario = usuario;
                     // Guardar los datos completos en localStorage
                     localStorage.setItem('usuarioActual', JSON.stringify(userData));
                     // Redirigir a la página correspondiente según el rol
                     if (userData.rol === 'psicologo') {
                         window.location.href = 'home.html';
                     } else if (userData.rol === 'administrador') {
-                        window.location.href = 'administrador.html';
+                        window.location.href = 'perfil_admin.html';
                     }
                 })
                 .catch(error => console.error('Error al obtener los datos del usuario:', error));

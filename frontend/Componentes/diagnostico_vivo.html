@@ -21,13 +21,13 @@
         <!-- Información combinada del psicólogo y paciente -->
         <div class="info-psicologo-paciente mb-4">
           <h5 id="datosPsicologo">Nombre del Psicólogo: <!-- Datos dinámicos --></h5>
-          <h5 id="datosPaciente">Nombre del Paciente: <!-- Datos dinámicos --></h5>
+          <h5 id="datosPaciente">Nombre del Estudiante: <!-- Datos dinámicos --></h5>
         </div>
 
-        <!-- Preguntas predefinidas -->
-        <div class="container mt-4">
+        <!-- Contenedor de preguntas (relleno dinámicamente por JS) -->
+        <div class="preguntas">
           <h4>Preguntas de Diagnóstico</h4>
-          <div id="preguntasContainer"></div> <!-- Aquí se cargarán las preguntas dinámicamente -->
+          <div id="preguntasContainer"></div>
         </div>
       </div>
 
@@ -36,7 +36,7 @@
         <!-- Fecha y Hora de la sesión -->
         <div class="fecha-hora mb-3 text-center">
           <h6>Fecha y Hora:</h6>
-          <p id="fechaHoraActual"></p> <!-- Aquí aparecerá la fecha y hora -->
+          <p id="fechaHoraActual"></p>
         </div>
 
         <!-- Cámara en vivo -->
@@ -45,22 +45,22 @@
         </div>
 
         <!-- Botón para finalizar sesión -->
-        <button id="startSession" class="btn btn-warning">Finalizar sesión</button>
+        <button class="btn btn-success" onclick="finalizarSesion()">Finalizar sesión y guardar reporte</button>
       </div>
     </div>
-  </div> <!-- Fin del contenedor principal -->
+  </div>
 
   <!-- Scripts -->
   <script src="../node_modules/jquery/dist/jquery.min.js"></script>
   <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
   <script src="../Componentes/diagnostico_vivo.js"></script>
   <script>
-    // Cargar el navbar
+    // Cargar el navbar dinámicamente
     fetch('navbar.html')
       .then(response => response.text())
       .then(data => document.getElementById('navbar').innerHTML = data)
       .catch(error => console.error('Error al cargar el navbar:', error));
   </script>
-  
+
 </body>
 </html>

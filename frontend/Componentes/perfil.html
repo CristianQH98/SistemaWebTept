@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Perfil - Sis-TEPT</title>
+  <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/navbar.css">
+  <link rel="stylesheet" href="../css/perfil.css"> <!-- Estilos personalizados -->
+</head>
+<body>
+
+  <!-- Navbar -->
+  <div id="navbar"></div>
+
+  <!-- Contenido del perfil -->
+  <div class="perfil-container container mt-5">
+    <h2 class="text-center mb-4 text-warning">Perfil del Psicólogo</h2>
+
+    <div class="perfil-info bg-dark text-white p-4 rounded shadow" id="perfil-info">
+      <!-- Contenido cargado dinámicamente -->
+    </div>
+
+    <div class="text-center mt-4">
+      <button id="gestionar-preguntas" class="btn btn-warning">Gestionar Preguntas</button>
+    </div>
+  </div>
+
+  <!-- Modal para cambiar contraseña -->
+  <div class="modal fade" id="modalCambiarContrasena" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content bg-dark text-white">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalLabel">Cambiar Contraseña</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body">
+          <input type="password" id="nuevaContrasena" class="form-control" placeholder="Nueva contraseña">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-success" id="guardarContrasena">Guardar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+  <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="perfil.js"></script>
+  <script>
+    // Cargar el navbar
+    fetch('navbar.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('navbar').innerHTML = data;
+      })
+      .catch(error => console.error('Error al cargar el navbar:', error));
+  </script>
+</body>
+</html>

@@ -1,4 +1,4 @@
-// Función para cargar los datos del psicólogo y del paciente
+// Función para cargar los datos del psicólogo y del estudiante
 function cargarDatos() {
     const usuarioActual = JSON.parse(localStorage.getItem('usuarioActual'));
     if (usuarioActual) {
@@ -10,20 +10,28 @@ function cargarDatos() {
     }
 
     const urlParams = new URLSearchParams(window.location.search);
-    const pacienteId = urlParams.get('pacienteId');
+    const pacienteId = urlParams.get('id_paciente');
+    console.log("Estudiante ID recibido:", pacienteId); // Para depurar
 
-    fetch(`http://127.0.0.1:5000/pacientes/${pacienteId}`)
-        .then(response => response.json())
-        .then(data => {
-            if (data) {
-                document.getElementById('datosPaciente').innerHTML = `
-                    Nombre del Paciente: ${data.Nombre} ${data.Apellidos}, ${data.Edad} años
-                `;
-            } else {
-                document.getElementById('datosPaciente').innerHTML = 'Información del paciente no disponible';
-            }
-        })
-        .catch(error => console.error('Error al obtener los datos del paciente:', error));
+    if (pacienteId) {
+        fetch(`http://127.0.0.1:5000/pacientes/${pacienteId}`)
+            .then(response => response.json())
+            .then(data => {
+                if (data && data.Nombre && data.Apellidos) {
+                    document.getElementById('datosPaciente').innerHTML = `
+                        Nombre del Estudiante: ${data.Nombre} ${data.Apellidos}, ${data.Edad} años
+                    `;
+                } else {
+                    document.getElementById('datosPaciente').innerHTML = 'Información del estudiante no disponible';
+                }
+            })
+            .catch(error => {
+                console.error('Error al obtener los datos del estudiante:', error);
+                document.getElementById('datosPaciente').innerHTML = 'Error al cargar información del estudiante';
+            });
+    } else {
+        document.getElementById('datosPaciente').innerHTML = 'ID del estudiante no proporcionado';
+    }
 }
 
 function actualizarFechaHora() {
@@ -38,42 +46,36 @@ function actualizarFechaHora() {
     }
 }
 
-// Inicia la actualización de fecha y hora al cargar la página
 document.addEventListener('DOMContentLoaded', () => {
     cargarDatos();
     actualizarFechaHora();
-    setInterval(actualizarFechaHora, 1000); // Actualiza cada segundo
+    setInterval(actualizarFechaHora, 1000);
 });
 
-// Función para iniciar el flujo de video
 function iniciarFlujo() {
     const videoContainer = document.getElementById('videoStream');
     videoContainer.src = 'http://127.0.0.1:5000/video_feed';
     videoContainer.onerror = reconectarFlujo;
 }
 
-// Función para reconectar el flujo de video
 function reconectarFlujo() {
     console.log("Conexión de video perdida. Intentando reconectar...");
-    setTimeout(iniciarFlujo, 2000); // Intenta reconectar después de 2 segundos
+    setTimeout(iniciarFlujo, 2000);
 }
 
-//funcion para capturar audio
 function iniciarGrabacion(preguntaId) {
-    // Llamada al backend para iniciar la captura de audio y análisis
     fetch('http://127.0.0.1:5000/capturar_audio')
       .then(response => response.json())
       .then(data => {
         const textoTranscrito = data.texto_transcrito;
         const emocionDetectada = data.emocion;
-        
-        // Actualiza el cuadro de texto de la pregunta correspondiente
         const respuestaTextarea = document.getElementById(`respuesta${preguntaId}`);
         respuestaTextarea.value = `Texto: ${textoTranscrito}\nEmoción: ${emocionDetectada}`;
       })
       .catch(error => console.error('Error en la captura de audio:', error));
-  }
-  function cargarPreguntas() {
+}
+
+function cargarPreguntas() {
     fetch('http://127.0.0.1:5000/obtener_preguntas')
         .then(response => response.json())
         .then(data => {
@@ -103,22 +105,17 @@ function iniciarGrabacion(preguntaId) {
                     }
                 });
 
-                // Inicializar el índice de la pregunta actual
                 let preguntaActualIndex = 0;
                 const preguntas = document.querySelectorAll('.pregunta-item');
 
-                // Función para pasar a la siguiente pregunta
-                window.siguientePregunta = () => { // Hacerla global para que el onclick funcione
+                window.siguientePregunta = () => {
                     if (preguntaActualIndex < preguntas.length - 1) {
                         $(preguntas[preguntaActualIndex]).fadeOut(() => {
                             preguntaActualIndex++;
                             $(preguntas[preguntaActualIndex]).fadeIn();
-                            // Aquí podrías deshabilitar el botón "Grabar Respuesta" de la pregunta anterior
-                            // y habilitar el de la actual si es necesario.
                         });
                     } else {
                         alert('Has llegado a la última pregunta.');
-                        // Aquí podrías habilitar el botón "Finalizar sesión"
                     }
                 };
             } else {
@@ -128,20 +125,77 @@ function iniciarGrabacion(preguntaId) {
         .catch(error => console.error('Error al cargar las preguntas:', error));
 }
 
+function finalizarSesion() {
+    fetch('http://127.0.0.1:5000/probar_diagnostico')
+        .then(response => response.json())
+        .then(data => {
+            console.log("Diagnóstico finalizado:", data);
+
+            const nombreArchivo = data.archivo;
+
+            // Guardar el reporte en MongoDB
+            fetch('http://127.0.0.1:5000/guardar_reporte_bd', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ archivo: nombreArchivo })
+            })
+            .then(response => response.json())
+            .then(dataMongo => {
+                console.log("Reporte guardado en MongoDB:", dataMongo.mensaje);
+                alert("Reporte guardado en la base de datos exitosamente");
+
+                // Redirigir al HTML del reporte
+                window.location.href = `reporte.html?archivo=${encodeURIComponent(nombreArchivo)}`;
+            })
+            .catch(error => {
+                console.error("Error al guardar el reporte en MongoDB:", error);
+                alert("No se pudo guardar el reporte en la base de datos");
+            });
+
+        })
+        .catch(error => {
+            console.error("Error durante el diagnóstico:", error);
+            alert("Hubo un error al finalizar el diagnóstico");
+        });
+}
+
+
+
 function grabarRespuesta(index) {
     fetch('http://127.0.0.1:5000/grabar_respuesta')
         .then(response => response.json())
         .then(data => {
             const respuestaTextarea = document.getElementById(`respuesta-${index}`);
-            const emocion = data.emociones_especificas.join(', ') || "Desconocido"; // Maneja el caso de que no haya emociones
+            const emocion = data.emociones_especificas.join(', ') || "Desconocido";
             respuestaTextarea.value = `Texto: ${data.texto} | Sentimiento: ${data.sentimiento_general} | Emociones: ${emocion}`;
         })
         .catch(error => console.error('Error al grabar la respuesta:', error));
 }
 
-
 document.addEventListener('DOMContentLoaded', () => {
     cargarPreguntas();
 });
-// Iniciar el flujo de video al cargar la página
+
 document.addEventListener('DOMContentLoaded', iniciarFlujo);
+
+// Esta función guarda el archivo .json en MongoDB
+function guardarReporteEnMongoDB(nombreArchivo) {
+    fetch('http://127.0.0.1:5000/guardar_reporte_bd', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ archivo: nombreArchivo })
+    })
+    .then(response => response.json())
+    .then(data => {
+        console.log(" Reporte guardado en MongoDB:", data.mensaje);
+        alert(" Reporte guardado en la base de datos");
+    })
+    .catch(error => {
+        console.error(" Error al guardar el reporte:", error);
+        alert(" No se pudo guardar en la base de datos");
+    });
+}
